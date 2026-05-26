@@ -1,0 +1,26 @@
+[
+  {
+    "employee_id": "EMP001",
+    "date": "2025-11-01",
+    "status": "Present",
+    "check_in_time": "09:05"
+  },
+  {
+    "employee_id": "EMP002",
+    "date": "2025-11-01",
+    "status": "WFH",
+    "check_in_time": "09:20"
+  },
+  {
+    "employee_id": "EMP003",
+    "date": "2025-11-01",
+    "status": "Absent",
+    "check_in_time": null
+  },
+  {
+    "employee_id": "EMP004",
+    "date": "2025-11-01",
+    "status": "Present",
+    "check_in_time": "08:55"
+  }
+]
