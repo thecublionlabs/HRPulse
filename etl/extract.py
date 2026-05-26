@@ -36,4 +36,5 @@ def run_extraction_pipeline():
     extract_attendance()
 
 
-run_extraction_pipeline()
+if __name__ == "__main__":
+    run_extraction_pipeline()

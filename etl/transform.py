@@ -30,4 +30,5 @@ def transform_employees():
     print("\nCleaned employee data saved to staging layer.")
 
 
-transform_employees()
+if __name__ == "__main__":
+    transform_employees()

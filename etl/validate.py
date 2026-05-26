@@ -67,4 +67,5 @@ def validate_employees():
     print("\nValidation Completed.")
 
 
-validate_employees()
+if __name__ == "__main__":
+    validate_employees()
