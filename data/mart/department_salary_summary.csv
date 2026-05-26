@@ -1,0 +1,5 @@
+department,employee_count,average_salary,total_bonus
+Engineering,2,1275000.0,270000
+Finance,1,800000.0,50000
+Hr,1,950000.0,95000
+Sales,1,700000.0,40000

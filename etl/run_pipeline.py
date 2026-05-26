@@ -1,41 +1,52 @@
-from extract import (
+from etl.mart import (
+    generate_department_salary_mart
+)
+
+from configs.logger_config import setup_logger
+logger = setup_logger()
+
+from etl.extract import (
     extract_employees,
     extract_salary,
     extract_attendance
 )
 
-from transform import (
+from etl.transform import (
     transform_employees
 )
 
-from validate import (
+from etl.validate import (
     validate_employees
 )
 
 
 def run_pipeline():
-    print("\nHRPulse ETL Pipeline Started")
-    print("=" * 50)
+    logger.info("HRPulse ETL Pipeline Started")
+    logger.info("=" * 50)
 
-    print("\nSTEP 1 — EXTRACTION")
-    print("-" * 50)
+    logger.info("STEP 1 — EXTRACTION")
+    logger.info("-" * 50)
 
     extract_employees()
     extract_salary()
     extract_attendance()
 
-    print("\nSTEP 2 — TRANSFORMATION")
-    print("-" * 50)
+    logger.info("STEP 2 — TRANSFORMATION")
+    logger.info("-" * 50)
 
     transform_employees()
 
-    print("\nSTEP 3 — VALIDATION")
-    print("-" * 50)
+    logger.info("STEP 3 — VALIDATION")
+    logger.info("-" * 50)
 
     validate_employees()
+    print("\nSTEP 4 — MART GENERATION")
+    print("-" * 50)
 
-    print("\nHRPulse ETL Pipeline Completed")
-    print("=" * 50)
+    generate_department_salary_mart()
 
+    logger.info("HRPulse ETL Pipeline Completed")
+    logger.info("=" * 50)
+    
 
 run_pipeline()
